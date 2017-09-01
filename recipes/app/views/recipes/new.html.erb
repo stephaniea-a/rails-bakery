@@ -1,0 +1,58 @@
+<h1>New Recipe</h1>
+
+	<%= form_with(model: @recipe) do |form| %>
+
+		<div class="field">
+			<%= form.label :'title:' %>
+			<%= form.text_field :title, id: :recipe_title %>	
+		</div>
+		<br>
+		<div>
+			<%= form.label :'image Url:' %>
+			<%= form.text_field :image, id: :recipe_image %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'rating:' %>
+			<%= form.number_field :rating, id: :recipe_rating %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'description:' %>
+			<%= form.text_field :description, id: :recipe_description %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'preparation time: (h/m)' %>
+			<%= form.time_select :prep_time, id: :recipe_prep_time %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'cooking time: (h/m)' %>
+			<%= form.time_select :cook_time, id: :recipe_cook_time %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'difficulty_level:' %>
+			<%= form.text_field :difficulty_level, id: :difficulty_level_time %>
+			<!-- <select>
+			  <option value="easy">Easy</option>
+			  <option value="medium">Medium</option>
+			  <option value="difficut">Difficult</option>
+			</select> -->
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'ingredients:' %>
+			<%= form.text_area :ingredients, id: :recipe_ingredients %>
+		</div>
+		<br>
+		<div class="field">
+			<%= form.label :'method:' %>
+			<%= form.text_area :method, id: :recipe_method %>
+		</div>
+		<br>
+		<div class="field">
+			<%=form.submit %>
+		</div>
+	<% end %>

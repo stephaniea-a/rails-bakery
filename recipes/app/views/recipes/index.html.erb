@@ -1,0 +1,22 @@
+<h1>Recipes</h1>
+
+<p>Welcome to the recipe hub. The best place to share your tried and tested recipes and try new techniques.</p>
+
+
+	<% @recipes.each do |recipe| %>
+		<div class="show">
+			<h3><%= link_to recipe.title, recipe %></h3>
+			<img src="<%= recipe.image %>"/>
+			<p>Quick description: <%= recipe.description %></p>
+			<p>Recipe rating: <%= recipe.rating %>/5</p>
+			
+			<p>Preparation time: <%= recipe.prep_time %></p>
+			<p>Cooking time: <%= recipe.cook_time %></p>
+			<p>Level: <%= recipe.difficulty_level %></p>
+			<p>Ingredients: <%= recipe.ingredients %></p>
+			<p>Method: <%= recipe.method %></p>
+		</div>
+	<% end %>
+
+
+   
